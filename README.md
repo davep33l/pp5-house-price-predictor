@@ -1,47 +1,3 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-## Template Instructions
-
-Welcome,
-
-This is the Code Institute student template for the Heritage Housing project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-2. Log into the cloud-based IDE with your GitHub account.
-
-3. On your Dashboard, click on the Create button
-
-4. Paste in the URL you copied from GitHub earlier
-
-5. Click Create
-
-6. Wait for the workspace to open. This can take a few minutes.
-
-7. Open a new terminal and `pip3 install -r requirements.txt`
-
-11. Open the jupyter_notebooks directory and click on the notebook you want to open.
-
-12. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.8.18 as it inherits from the workspace so it will be Python-3.8.18 as installed by our template. To confirm this you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In your Cloud IDE, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
-
 ## Dataset Content
 
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
@@ -76,12 +32,12 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ## Business Requirements
 
-As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
+A client has recently received an inheritance from a deceased great-grandfather, which contains properties located in Ames, Iowa. They have asked for assistance in maximising the sales price for the inherited properties.
 
-Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
+Although the client has an excellent understanding of property prices in their own local area, they fear that basing their estimates for property value on their current knowledge may lead to inaccurate appraisals. What makes a house desirable and valuable in their local area, might not be the same in Ames, Iowa. They have found a public dataset containing house prices from Ames, Iowa and have provided it as part of the analysis. 
 
-* 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
-* 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
+1. The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
+2. The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
 ## Hypothesis and how to validate?
 
@@ -93,12 +49,34 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## ML Business Case
 
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+### Predict Sale Price
+
+- We want an ML model to predict the Sale Price of a house in Ames, Iowa. As the target is a continuous variable a regression model will be the best approach. The model will be supervised and multi-dimensional. 
+- Our ideal outcome is to provide the client the ability to predict the sale price of houses in Ames, Iowa for the inherited properties they received.
+- The model success metrics are:
+  - At least a 0.75 R2 score on both the train and test sets. 
+- The model is considered a failure if:
+  - The model does not provide any actionable insights for the client to take to maximise the sale price of the inherited properties.
+- The model output is defined as a numerical value, which represents the predicted sale price of the house. 
+- Heuristics: The client's currently estimations of property prices in her local area may not be relevant to Ames, Iowa. Therefore, requested that analysis be performed on a dataset specific to Ames, Iowa.
+- The training data to fit the model comes from the client and consists of approximately 1,500 records. The Target is SalePrice and the features will be all other variables in from the dataset.
 
 ## Dashboard Design
 
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+
+### Page 1 - Project Summary
+### Page 2 - Sale Price Study
+#### Before Analysis
+- High level, we know we want to answer business requirement 1, and as part of the analysis will explore the best visulisations to show the correlation of variables against the Sale Price.
+#### After Analysis
+- TBD
+### Page 3 - Sale Price Prediction
+- Highlight business requirement 2
+- Have input widgets relating to house features, which are given to an ML task to predict the Sale Price. 
+### Page 4 - Project Hypothesis and Validation
+### Page 5 - ML: Process to determine Sale Price (placeholder name)
 
 ## Unfixed Bugs
 
@@ -122,6 +100,19 @@ Although your friend has an excellent understanding of property prices in her ow
 ## Main Data Analysis and Machine Learning Libraries
 
 * Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+
+| Library Name | Example Usage |
+|--------------|---------------|
+|       numpy       |        tbc       |
+|       pandas       |        tbc        |
+|       matplotlib      |      tbc          |
+|       scikit-learn   |      tbc          |
+|       feature-engine   |     tbc           |
+|       ydata-profiling   |      tbc          |
+|       plotly   |        tbc        |
+|       ppscore   |      tbc          |
+|       streamlit   |      tbc          |
+
 
 ## Credits
 
