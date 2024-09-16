@@ -25,7 +25,7 @@ def project_hypothesis_body():
 
     st.success(
         f"**Correct**\n\n "
-        f"The correlation study performed in the House Price Study supports this. \n\n"
+        f"* The correlation study performed in the House Price Study supports this. \n\n"
     )
 
     st.info(
