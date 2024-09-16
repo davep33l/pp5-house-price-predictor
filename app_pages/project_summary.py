@@ -58,7 +58,7 @@ def project_summary_body():
     
         # copied from README file - "Business Requirements" section
     st.success(
-    f"The project has 2 business requirements:\n\n"
+    f"**The project has 2 business requirements:**\n\n"
     f"* 1 - The client is interested in discovering how the house attributes correlate with the sale "
     f"price. Therefore, the client expects data visualisations of the correlated variables against "
     f"the sale price to show that.\n\n"
