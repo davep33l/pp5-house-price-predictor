@@ -45,11 +45,19 @@ Although the client has an excellent understanding of property prices in their o
 
 ## Hypothesis and how to validate?
 
-* List here your project hypothesis(es) and how you envision validating it (them).
+1. Hypothesis 1 - Better quality decoration will positively influence the sale price (as higher quality materials are likely to have been used, and cost more). 
+2. Hypothesis 2 - Larger rooms/floors will positively influence the sale price (as it implies more land/space).
+3. Hypothesis 3 - New builds will positively influence the sale price (due to higher cost of materials / inflation)
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+* Business Requirement 1 - Data Visualization and Correlation Study
+  * We will inspect the data related to the house features in Ames, Iowa
+  * We will conduct a correlation study (Spearman and Pearson) to understand in more detail how the variables relate to the sale price.
+  * We will plot the main variables against sale price and visualize the insights.
+
+* Business Requirement 2 - Regression and Data Analysis
+  * We want to predict the expected sale price of 4 inherited houses using a regression ML model
 
 ## ML Business Case
 
@@ -66,6 +74,18 @@ Although the client has an excellent understanding of property prices in their o
 - The training data to fit the model comes from the client and consists of approximately 1,500 records. The Target is SalePrice and the features will be all other variables in from the dataset.
 
 ## Dashboard Design
+
+* Project Summary Page
+  * This will contain:
+    * The project purpose
+    * The project terms and jargon with a breakdown of all the features and description
+    * The source of the dataset used
+    * The business requirements
+    * The link to the github repository
+
+* Project Hypothesis
+  * This will contain:
+    * Each of the project hypothesis and the conclusion (Incorrect/Correct) 
 
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
