@@ -5,7 +5,7 @@ import joblib
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def load_house_data():
-    df = pd.read_csv("outputs/datasets/cleaned/CompleteSetCleaned.csv")
+    df = pd.read_csv("outputs/datasets/cleaned/CompleteStudyData.csv")
     return df
 
 
