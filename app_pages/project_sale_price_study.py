@@ -53,7 +53,7 @@ def project_sale_price_study_body():
     df_eda = df.filter(vars_to_study + ['SalePrice'])
 
     # Individual plots per variable
-    if st.checkbox("Sale Price Distribution per Variable"):
+    if st.checkbox("Variable Distribution by Sale Price"):
         sale_price_distribution_per_variable(df_eda)
 
 
