@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from src.data_management import load_pkl_file
+from src.data_management import load_pkl_file, load_house_data
 
 
 def project_predict_sale_price_body():
@@ -22,7 +22,7 @@ def project_predict_sale_price_body():
 
     # Generate Live Data
     check_variables_for_UI(sale_price_features)
-
+    X_live = DrawInputsWidgets()
 
 
 def check_variables_for_UI(sale_price_features):
@@ -37,3 +37,50 @@ def check_variables_for_UI(sale_price_features):
     )
     st.write(
         f"* There are {len(combined_features)} features for the UI: \n\n {combined_features}")
+
+
+def DrawInputsWidgets():
+
+    # load dataset
+    df = load_house_data()
+
+    # create the columns
+    col1, col2, col3, col4 = st.beta_columns(4)
+
+    # We are using these features to feed the ML pipeline - values copied from check_variables_for_UI() result
+    # {'OverallQual', '2ndFlrSF', 'GarageArea', 'TotalBsmtSF'}
+
+    # create an empty DataFrame, which will be the live data
+    X_live = pd.DataFrame([], index=[0])
+
+    # from here on we draw the widget based on the variable type (numerical or categorical)
+    # and set initial values
+    with col1:
+        feature = "OverallQual"
+        st_widget = st.number_input(
+            label=feature
+        )
+    X_live[feature] = st_widget
+
+    with col2:
+        feature = "2ndFlrSF"
+        st_widget = st.number_input(
+            label=feature
+        )
+    X_live[feature] = st_widget
+
+    with col3:
+        feature = "GarageArea"
+        st_widget = st.number_input(
+            label=feature
+        )
+    X_live[feature] = st_widget
+
+    with col4:
+        feature = "TotalBsmtSF"
+        st_widget = st.number_input(
+            label=feature
+        )
+    X_live[feature] = st_widget
+
+    return X_live
