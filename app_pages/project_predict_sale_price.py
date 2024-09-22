@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from src.data_management import load_pkl_file, load_house_data
+from src.machine_learning.predictive_analysis import predict_sale_price
 
 
 def project_predict_sale_price_body():
@@ -23,6 +24,10 @@ def project_predict_sale_price_body():
     # Generate Live Data
     check_variables_for_UI(sale_price_features)
     X_live = DrawInputsWidgets()
+
+
+    if st.button("Predict Sale Price"):
+        predict_sale_price(X_live, sale_price_features, sale_price_pipe)
 
 
 def check_variables_for_UI(sale_price_features):
@@ -96,5 +101,7 @@ def DrawInputsWidgets():
             help="Total square feet of basement area"
         )
     X_live[feature] = st_widget
+
+    # st.write(X_live)
 
     return X_live
