@@ -55,10 +55,16 @@ def DrawInputsWidgets():
 
     # from here on we draw the widget based on the variable type (numerical or categorical)
     # and set initial values
+    # streamlit docs for customising the number_input widget:
+    # https://docs.streamlit.io/develop/api-reference/widgets/st.number_input
     with col1:
         feature = "OverallQual"
         st_widget = st.number_input(
-            label=feature
+            label=feature,
+            min_value=1,
+            max_value=10,
+            step=1,
+            help="1 = Poor, 10 = Very Excellent"
         )
     X_live[feature] = st_widget
 
