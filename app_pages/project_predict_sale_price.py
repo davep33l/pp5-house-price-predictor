@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from src.data_management import load_pkl_file, load_house_data
+from src.data_management import load_pkl_file, load_house_data, load_inherited_house_data
 from src.machine_learning.predictive_analysis import predict_sale_price
 
 
@@ -28,6 +28,19 @@ def project_predict_sale_price_body():
 
     if st.button("Predict Sale Price"):
         predict_sale_price(X_live, sale_price_features, sale_price_pipe)
+
+    st.write("---")
+
+    st.write("### Inherited House Price Predictions")
+
+    inherited_houses = load_inherited_house_data()
+    st.write(inherited_houses.filter(sale_price_features))
+
+    for i in range(len(inherited_houses)):
+        current_house = inherited_houses.iloc[[i]]
+        st.write(f"#### House {i+1}")
+        inherited_houses_predictions = predict_sale_price(current_house, sale_price_features, sale_price_pipe)
+
 
 
 def check_variables_for_UI(sale_price_features):
