@@ -57,35 +57,53 @@ def DrawInputsWidgets():
     # and set initial values
     # streamlit docs for customising the number_input widget:
     # https://docs.streamlit.io/develop/api-reference/widgets/st.number_input
+    # with col1:
+    #     feature = "OverallQual"
+    #     st_widget = st.number_input(
+    #         label=feature,
+    #         min_value=1,
+    #         max_value=10,
+    #         step=1,
+    #         help="Overall Quality of the house (1 = Poor, 10 = Very Excellent)"
+    #     )
+    # X_live[feature] = st_widget
+
     with col1:
         feature = "OverallQual"
-        st_widget = st.number_input(
+        st_widget = st.selectbox(
             label=feature,
-            min_value=1,
-            max_value=10,
-            step=1,
-            help="1 = Poor, 10 = Very Excellent"
+            options=sorted(df[feature].unique()),
+            help="Overall Quality of the house (1 = Poor, 10 = Very Excellent)"
         )
     X_live[feature] = st_widget
 
     with col2:
         feature = "2ndFlrSF"
         st_widget = st.number_input(
-            label=feature
+            label=feature,
+            min_value=0,
+            step=1,
+            help="Square feet of 2nd floor"
         )
     X_live[feature] = st_widget
 
     with col3:
         feature = "GarageArea"
         st_widget = st.number_input(
-            label=feature
+            label=feature,
+            min_value=0,
+            step=1,
+            help="Size of garage in square feet"
         )
     X_live[feature] = st_widget
 
     with col4:
         feature = "TotalBsmtSF"
         st_widget = st.number_input(
-            label=feature
+            label=feature,
+            min_value=0,
+            step=1,
+            help="Total square feet of basement area"
         )
     X_live[feature] = st_widget
 
