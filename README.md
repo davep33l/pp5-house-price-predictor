@@ -2,6 +2,37 @@
 
 Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.herokuapp.com/)
 
+- [House Price Predictor](#house-price-predictor)
+  - [Dataset Content](#dataset-content)
+  - [Business Requirements](#business-requirements)
+  - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+  - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
+  - [ML Business Case](#ml-business-case)
+    - [Predict Sale Price](#predict-sale-price)
+  - [Epics \& User Stories](#epics--user-stories)
+    - [Epic 1 - Data Collection](#epic-1---data-collection)
+    - [Epic 2 - Data Cleaning](#epic-2---data-cleaning)
+    - [Epic 3 - Data Exploration](#epic-3---data-exploration)
+    - [Epic 4 - Feature Engineering](#epic-4---feature-engineering)
+    - [Epic 5 - Modelling \& Evaluation](#epic-5---modelling--evaluation)
+  - [Dashboard Design](#dashboard-design)
+    - [Page 1 - Project Summary](#page-1---project-summary)
+    - [Page 2 - Sale Price Study](#page-2---sale-price-study)
+      - [Before Analysis](#before-analysis)
+      - [After Analysis](#after-analysis)
+    - [Page 3 - Sale Price Prediction](#page-3---sale-price-prediction)
+    - [Page 4 - Project Hypothesis and Validation](#page-4---project-hypothesis-and-validation)
+    - [Page 5 - ML: Process to determine Sale Price (placeholder name)](#page-5---ml-process-to-determine-sale-price-placeholder-name)
+  - [Unfixed Bugs](#unfixed-bugs)
+  - [Deployment](#deployment)
+    - [Heroku](#heroku)
+  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+  - [Acknowledgements (optional)](#acknowledgements-optional)
+
+
 ## Dataset Content
 
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
@@ -34,6 +65,10 @@ Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.he
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
 
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
+
 ## Business Requirements
 
 A client has recently received an inheritance from a deceased great-grandfather, which contains properties located in Ames, Iowa. They have asked for assistance in maximising the sales price for the inherited properties.
@@ -43,11 +78,19 @@ Although the client has an excellent understanding of property prices in their o
 1. The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 2. The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
+
 ## Hypothesis and how to validate?
 
 1. Hypothesis 1 - Better quality decoration will positively influence the sale price (as higher quality materials are likely to have been used, and cost more). 
 2. Hypothesis 2 - Larger rooms/floors will positively influence the sale price (as it implies more land/space).
 3. Hypothesis 3 - New builds will positively influence the sale price (due to higher cost of materials / inflation)
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
@@ -58,6 +101,10 @@ Although the client has an excellent understanding of property prices in their o
 
 * Business Requirement 2 - Regression and Data Analysis
   * We want to predict the expected sale price of 4 inherited houses using a regression ML model
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
 
 ## ML Business Case
 
@@ -72,6 +119,83 @@ Although the client has an excellent understanding of property prices in their o
 - The model output is defined as a numerical value, which represents the predicted sale price of the house. 
 - Heuristics: The client's currently estimations of property prices in her local area may not be relevant to Ames, Iowa. Therefore, requested that analysis be performed on a dataset specific to Ames, Iowa.
 - The training data to fit the model comes from the client and consists of approximately 1,500 records. The Target is SalePrice and the features will be all other variables in from the dataset.
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
+
+## Epics & User Stories
+
+The CRISP-DM framework was fundamental in designing and producing this project, providing a clear road map for the Epics and User Story creation. The project was therefor broken down into 5 Epics, denoted below.
+
+### Epic 1 - Data Collection
+
+As a data scientist, I want to gather the housing data provided by the client so I can analyse the data set.
+
+As a data scientist, I want to save the data within the project directory so I can easily work on the data throughout the project.
+
+As a data scientist, I want to review high level observations on the data so I can identify potential issues and use these conclusions in data cleaning stage.
+
+
+### Epic 2 - Data Cleaning
+
+As a data scientist, I want to load in the house price data so I can start to clean the dataset.
+
+As a data scientist, I want to review missing values in the dataset so that I can plan the best method to deal with those missing values.
+
+As a data scientist, I want to run a correlation and PPS analysis on the data set so it can help guide the data imputation stage of the data cleaning process.
+
+As a data scientist, I want to compare my train and test set split so I can ensure that each variable is represented appropriately. 
+
+As a data scientist, I want to apply imputations to the data or drop columns with missing data so I compare the before and after effect on the distribution. 
+
+As a data scientist, I want to create a pipeline with all the imputations so I can automate the data cleaning in the latter stages of the project.
+
+As a data scientist, I want to apply the pipeline to my train, test and fullset so I can save the data and work on it during my data exploration and feature engineering stages.
+
+### Epic 3 - Data Exploration
+
+As a data scientist, I want to load in the cleaned full data set so I can garner more relevant insights for the client.
+
+As a data scientist, I want to review the quanile statistics, descriptive statistics and visual distribution of the data so I can better understand the relationships between the features and house price. 
+
+As a data scientist, I want to perform a correlation study on the data so I can select the most correlated variable to perform further analysis on. 
+
+As a data scientist, I want to visualise the distribution on the most correlated variables vs sale price so I can present these findings to the client. 
+
+As a data scientist, I want to visualise the correlation on the most correlated variables so I can present these findings to the client.
+
+As a data scientist, I want to save the data so I use it within the streamlit application when presenting findings to the client. 
+
+### Epic 4 - Feature Engineering
+
+As a data scientist, I want to load in the cleaned train and test data so I can perform feature engineering on the data.
+
+As a data scientist, I want to revist the data profiling so it can assist in determining which feature engineering transformations can be applied to the data. 
+
+As a data scientist, I want to group the data into relevant categories so I can apply various initial transformations to the data to help decide which transformation performed the best. 
+
+As a data scientist, I want to create a pipeline with all the feature engineering steps so I can automate the feature engineering in the latter stages of the project.
+
+### Epic 5 - Modelling & Evaluation
+
+As a data scientist, I want to load in the raw data set so I can perform the ML pipeline to the data. 
+
+As a data scientist, I want to define the ML pipeline so I can split into train and test sets. 
+
+As a data scientist, I want to perform a Grid Search CV so I can determine the most suitable algorithm. 
+
+As a data scientist, I want to perform hyperparameter optimisation on the best algorithm determined in the grid search and apply recommended parameters for that alogithm to see if the model improves.
+
+As a data scientist, I want to select the best model and perform feature importance on the model so we can trim down the model to include only the best features. 
+
+As a data scientist, I want to perform the regression on the train and test sets independantly so I can assess the R2 score.
+
+As a data scientist, I want to refit the pipeline with only the best features to reduce the size of the model.
+
+As a data scientist, I want to check that the reduced pipeline maintains its R2 score so I can determine if the refit was a success.
+
+As a data scientist, I want to save the model so it can be used in the streamlit app to predict the house price of the inherited houses. 
 
 ## Dashboard Design
 
@@ -102,9 +226,17 @@ Although the client has an excellent understanding of property prices in their o
 ### Page 4 - Project Hypothesis and Validation
 ### Page 5 - ML: Process to determine Sale Price (placeholder name)
 
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
+
 ## Unfixed Bugs
 
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
 
 ## Deployment
 
@@ -120,6 +252,10 @@ Although the client has an excellent understanding of property prices in their o
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
 
 ## Main Data Analysis and Machine Learning Libraries
 
@@ -137,11 +273,18 @@ Although the client has an excellent understanding of property prices in their o
 |       ppscore   |      tbc          |
 |       streamlit   |      tbc          |
 
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
 
 ## Credits
 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
 * You can break the credits section up into Content and Media, depending on what you have included in your project.
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
 
 ### Content
 
@@ -149,13 +292,24 @@ Although the client has an excellent understanding of property prices in their o
 * Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
 * The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
+
 ### Media
 
 * The photos used on the home and sign-up page are from This Open Source site
 * The images used for the gallery page were taken from this other open-source site
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
 
 ## Acknowledgements (optional)
 
 
 * In case you would like to thank the people that provided support through this project.
 
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
