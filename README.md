@@ -364,14 +364,28 @@ git clone https://github.com/davep33l/pp5-house-price-predictor.git
 
 ## Testing
 
-I installed `nbqa` using `pip install nbqa` to enable me to run `flake8` against my notebooks
+I installed `nbqa` using in order to use `flake8` on my notebooks:
+
+```
+pip install nbqa
+``` 
+Then run `flake8` against each notebook using the following command:
+
+```
+nbqa flake8 <notebook>
+# example
+nbqa flake8 jupyter_notebooks/1_Data_Collection.ipynb
+```
 
 ### PEP8 compliance
 
 |Notebook name|Initial Results from Flake8|After Fixing Results|Summary|
 |-------------|---------------|-------------|-------|
-|1_Data_Collection.ipynb|![PEP8 Notebook 1 Before](/assets/testing/pep8-notebook-1-before.png)  |![PEP8 Notebook 1 After](pep8-notebook-1-after.png) |I decided to leave these errors as they are specifically for file paths|
-|2_Data_Cleaning.ipynb|![PEP8 Notebook 2 Before](/assets/testing/pep8-notebook-2-before-1.png) ![PEP8 Notebook 2 Before 2](/assets/testing/pep8-notebook-2-before-2.png)   |![PEP8 Notebook 2 After](/assets/testing/pep8-notebook-2-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function|
+|1_Data_Collection.ipynb|![PEP8 Notebook 1 Before](/assets/testing/pep8-notebook-1-before.png)  |![PEP8 Notebook 1 After](/assets/testing/pep8-notebook-1-after.png) |I decided to leave these errors as they are specifically for file paths and its more readable this way|
+|2_Data_Cleaning.ipynb|![PEP8 Notebook 2 Before](/assets/testing/pep8-notebook-2-before-1.png) ![PEP8 Notebook 2 Before 2](/assets/testing/pep8-notebook-2-before-2.png)   |![PEP8 Notebook 2 After](/assets/testing/pep8-notebook-2-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function. I did fix the formatting in the functions provided by CI to be more PEP8 compliant|
+|3_House_Price_Study.ipynb|![PEP8 Notebook 3 Before](/assets/testing/pep8-notebook-3-before.png)  |![PEP8 Notebook 3 After](/assets/testing/pep8-notebook-3-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function. I did fix the formatting in the functions provided by CI to be more PEP8 compliant|
+
+
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
@@ -387,7 +401,7 @@ I installed `nbqa` using `pip install nbqa` to enable me to run `flake8` against
 
 ## Acknowledgements
 
-* I want to thank my wife for giving me the freedom to commit to this course for the past year, and more recently giving me the extra time, even though we have a new born son to raise. Without her support and encouragement I could not have seen this through to the end. 
+* I want to thank my wife for giving me the freedom to `commit` (pun intended) to this course for the past year, and more recently giving me the extra time, even though we have a new born son to raise. Without her support and encouragement I could not have seen this through to the end. 
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
