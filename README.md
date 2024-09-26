@@ -388,8 +388,6 @@ nbqa flake8 jupyter_notebooks/1_Data_Collection.ipynb
 |5_Modelling_And_Evaluation.ipynb|![PEP8 Notebook 5 Before](/assets/testing/pep8-notebook-5-before-1.png) ![PEP8 Notebook 5 Before 2](/assets/testing/pep8-notebook-5-before-1.png)  |![PEP8 Notebook 5 After](/assets/testing/pep8-notebook-5-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function.|
 
 
-![alt text](image.png)
-
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
 </div>
