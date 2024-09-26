@@ -24,6 +24,10 @@ Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.he
   - [Unfixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
     - [Heroku](#heroku)
+      - [Prerequisites](#prerequisites)
+      - [Deploying on Heroku using the Web UI](#deploying-on-heroku-using-the-web-ui)
+    - [Forking the project](#forking-the-project)
+    - [Cloning the project](#cloning-the-project)
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
   - [Testing](#testing)
   - [Credits](#credits)
@@ -249,16 +253,84 @@ As a data scientist, I want to save the model so it can be used in the streamlit
 ### Heroku
 
 * The App live link is: <[https://YOUR_APP_NAME.herokuapp.com/](https://pp5-house-price-predictor-3b886bb0d166.herokuapp.com/)>
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
 
-1. Log in to Heroku and create an App
-2. 
-3. At the Deploy tab, select GitHub as the deployment method.
-4. Select your repository name and click Search. Once it is found, click Connect.
-5. Select the branch you want to deploy, then click Deploy Branch.
-6. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-7. If the slug size is too large then add large files not required for the app to the .slugignore file.
+#### Prerequisites
+
+* Set the `runtime.txt` Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+
+```
+python-3.8.19
+```
+
+* Ensure the root directory contains the following `setup.sh` script as this contains the parameters for setting up streamlit.
+  
+```bash
+mkdir -p ~/.streamlit/
+echo "\
+[server]\n\
+headless = true\n\
+port = $PORT\n\
+enableCORS = false\n\
+\n\
+" > ~/.streamlit/config.toml
+```
+* Ensure the root directory contains a `Procfile` for Heroku containing the following. This ensures that Heroku knows what parameters to set for streamlit and server the right ports, and then knows to run the command for starting the streamlit app
+
+```
+web: sh setup.sh && streamlit run app.py
+```
+* General point of note, is to ensure that your `requirements.txt` file has all of the dependencies your project requires. As a reminder, run the following command to set your requirements.
+
+```
+pip freeze > requirements.txt
+```
+#### Deploying on Heroku using the Web UI
+1. Log into Heroku using the [this](https://id.heroku.com/login) link. Where you can log in using your email address and password, or create a new account.
+
+![Heroku Login Page](/assets/readme/heroku-login-page.png)
+
+2. Once logged in, from the [app](https://dashboard.heroku.com/apps) page, select "New" from the top right.
+
+![Heroku New App](/assets/readme/heroku-new-app.png)
+
+3. Select Create New App
+
+![Heroku Create New App](/assets/readme/heroku-create-new-app.png)
+
+4. Give your App a memorable name, select a local region and select create app.
+   
+![Heroku Create New App 2](/assets/readme/heroku-create-new-app-2.png)
+
+5. From the Deploy tab, select Github as the deployment method and select your repo to connect
+
+![Heroku Deployment Settings](/assets/readme/heroku-deployment-settings.png)
+
+6. On the same Deploy tab, select the branch you want to deploy, then click deploy branch
+
+![Heroku Deploy Branch](/assets/readme/heroku-deploy-branch.png)
+
+7. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
+
+![Heroku Open App](/assets/readme/heroku-open-app.png)
+
+8.  If the slug size is too large then add large files not required for the app to the .slugignore file.
+
+### Forking the project
+
+1. Navigate to the [Github Repo](https://github.com/davep33l/pp5-house-price-predictor)
+2. Select the "Fork" option and save it to your own Github account
+
+### Cloning the project
+
+1. Navigate to the [Github Repo](https://github.com/davep33l/pp5-house-price-predictor)
+2. Select the "Code" button
+3. Copy the HTTPS link
+4. Create a new directory for the project on your local development environment
+5. Open up your terminal of choice 
+6. Type the following command
+```
+git clone https://github.com/davep33l/pp5-house-price-predictor.git
+```
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
