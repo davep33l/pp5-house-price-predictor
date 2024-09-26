@@ -385,9 +385,10 @@ nbqa flake8 jupyter_notebooks/1_Data_Collection.ipynb
 |2_Data_Cleaning.ipynb|![PEP8 Notebook 2 Before](/assets/testing/pep8-notebook-2-before-1.png) ![PEP8 Notebook 2 Before 2](/assets/testing/pep8-notebook-2-before-2.png)   |![PEP8 Notebook 2 After](/assets/testing/pep8-notebook-2-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function. I did fix the formatting in the functions provided by CI to be more PEP8 compliant|
 |3_House_Price_Study.ipynb|![PEP8 Notebook 3 Before](/assets/testing/pep8-notebook-3-before.png)  |![PEP8 Notebook 3 After](/assets/testing/pep8-notebook-3-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function. I did fix the formatting in the functions provided by CI to be more PEP8 compliant|
 |4_Feature_Engineering.ipynb|![PEP8 Notebook 4 Before](/assets/testing/pep8-notebook-4-before.png)  |![PEP8 Notebook 4 After](/assets/testing/pep8-notebook-4-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function.|
+|5_Modelling_And_Evaluation.ipynb|![PEP8 Notebook 5 Before](/assets/testing/pep8-notebook-5-before-1.png) ![PEP8 Notebook 5 Before 2](/assets/testing/pep8-notebook-5-before-1.png)  |![PEP8 Notebook 5 After](/assets/testing/pep8-notebook-5-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function.|
 
 
-
+![alt text](image.png)
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
