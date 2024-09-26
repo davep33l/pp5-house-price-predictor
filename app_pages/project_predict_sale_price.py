@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
-from src.data_management import load_pkl_file, load_house_data, load_inherited_house_data
+from src.data_management import (load_pkl_file,
+                                 load_house_data,
+                                 load_inherited_house_data)
 from src.machine_learning.predictive_analysis import predict_sale_price
 
 
@@ -11,20 +13,21 @@ def project_predict_sale_price_body():
     sale_price_pipe = load_pkl_file(
         f"outputs/ml_pipeline/predict_sale_price/{version}/clf_pipeline.pkl")
     sale_price_features = (pd.read_csv(f"outputs/ml_pipeline/predict_sale_price/{version}/X_train.csv")
-                       .columns
-                       .to_list()
-                       )
+                           .columns.to_list()
+                           )
 
     st.write("### Predict Sale Price Interface")
 
-    st.info(f"The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.")
+    st.info(
+        "The client is interested in predicting the house sale "
+        "price from her four inherited houses and any other "
+        "house in Ames, Iowa.")
 
     st.write("---")
 
     # Generate Live Data
     check_variables_for_UI(sale_price_features)
     X_live = DrawInputsWidgets()
-
 
     if st.button("Predict Sale Price"):
         predict_sale_price(X_live, sale_price_features, sale_price_pipe)
@@ -39,8 +42,7 @@ def project_predict_sale_price_body():
     for i in range(len(inherited_houses)):
         current_house = inherited_houses.iloc[[i]]
         st.write(f"#### House {i+1}")
-        inherited_houses_predictions = predict_sale_price(current_house, sale_price_features, sale_price_pipe)
-
+        predict_sale_price(current_house, sale_price_features, sale_price_pipe)
 
 
 def check_variables_for_UI(sale_price_features):
@@ -65,13 +67,15 @@ def DrawInputsWidgets():
     # create the columns
     col1, col2, col3, col4 = st.beta_columns(4)
 
-    # We are using these features to feed the ML pipeline - values copied from check_variables_for_UI() result
+    # We are using these features to feed the ML pipeline - values
+    # copied from check_variables_for_UI() result
     # {'OverallQual', '2ndFlrSF', 'GarageArea', 'TotalBsmtSF'}
 
     # create an empty DataFrame, which will be the live data
     X_live = pd.DataFrame([], index=[0])
 
-    # from here on we draw the widget based on the variable type (numerical or categorical)
+    # from here on we draw the widget based on the
+    # variable type (numerical or categorical)
     # and set initial values
     # streamlit docs for customising the number_input widget:
     # https://docs.streamlit.io/develop/api-reference/widgets/st.number_input
@@ -114,7 +118,5 @@ def DrawInputsWidgets():
             help="Total square feet of basement area"
         )
     X_live[feature] = st_widget
-
-    # st.write(X_live)
 
     return X_live

@@ -390,13 +390,16 @@ nbqa flake8 jupyter_notebooks/1_Data_Collection.ipynb
 | project_summary.py | ![PEP8 project_summary.py Before](/assets/testing/pep8-project_summary-before.png) | ![PEP8 project_summary.py After](/assets/testing/pep8-project_summary-after.png) | Retained lines that are over the recommended amount for readability in the table for readability |
 | project_hypothesis.py| ![PEP8 project_hypothesis.py Before](/assets/testing/pep8-project_hypothesis-before.png) | ![PEP8 project_hypothesis.py After](/assets/testing/pep8-project_hypothesis-after.png) | No Issues |
 | project_sale_price_study.py| ![PEP8 project_sale_price_study.py Before](/assets/testing/pep8-project_sale_price_study-before.png) | ![PEP8 project_sale_price_study.py After](/assets/testing/pep8-project_sale_price_study-after.png) | Kept a few warnings to maintain readability |
-| project_predict_sale_price.py| before | after | comments |
+| project_predict_sale_price.py| ![PEP8 project_predict_sale_price.py Before](/assets/testing/pep8-project_predict_sale_price-before.png) | ![PEP8 project_predict_sale_price.py After](/assets/testing/pep8-project_predict_sale_price-after.png) | Kept a few warnings to maintain readability |
 | project_ml_predict_sale_price.py| ![PEP8 project_ml_predict_sale_price.py Before](/assets/testing/pep8-ml_predict_sale_price-before.png) | ![PEP8 project_ml_predict_sale_price.py After](/assets/testing/pep8-ml_predict_sale_price-after.png) | Kept a few warnings to maintain readability |
-| data_management.py| before | after | comments |
-| evaluate_regression.py| before | after | comments |
-| predictive_analysis.py| before | after | comments |
+| data_management.py| ![PEP8 data_management.py Before](/assets/testing/pep8-data_management-before.png) | ![PEP8 data_management.py After](/assets/testing/pep8-data_management-after.png) | No Issues |
+| evaluate_regression.py| ![PEP8 evaluate_regression.py Before](/assets/testing/pep8-evaluate_regression-before.png) | ![PEP8 evaluate_regression.py After](/assets/testing/pep8-evaluate_regression-after.png) | Kept a few warnings to maintain readability |
+| predictive_analysis.py| ![PEP8 predictive_analysis.py Before](/assets/testing/pep8-predictive_analysis-before.png) | ![PEP8 predictive_analysis.py After](/assets/testing/pep8-predictive_analysis-after.png) | Kept a few warnings to maintain readability |
+
+
 
 ![alt text](image.png)
+
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
 </div>
