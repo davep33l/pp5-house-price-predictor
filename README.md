@@ -385,7 +385,14 @@ nbqa flake8 jupyter_notebooks/1_Data_Collection.ipynb
 |2_Data_Cleaning.ipynb|![PEP8 Notebook 2 Before](/assets/testing/pep8-notebook-2-before-1.png) ![PEP8 Notebook 2 Before 2](/assets/testing/pep8-notebook-2-before-2.png)   |![PEP8 Notebook 2 After](/assets/testing/pep8-notebook-2-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function. I did fix the formatting in the functions provided by CI to be more PEP8 compliant|
 |3_House_Price_Study.ipynb|![PEP8 Notebook 3 Before](/assets/testing/pep8-notebook-3-before.png)  |![PEP8 Notebook 3 After](/assets/testing/pep8-notebook-3-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function. I did fix the formatting in the functions provided by CI to be more PEP8 compliant|
 |4_Feature_Engineering.ipynb|![PEP8 Notebook 4 Before](/assets/testing/pep8-notebook-4-before.png)  |![PEP8 Notebook 4 After](/assets/testing/pep8-notebook-4-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function.|
-|5_Modelling_And_Evaluation.ipynb|![PEP8 Notebook 5 Before](/assets/testing/pep8-notebook-5-before-1.png) ![PEP8 Notebook 5 Before 2](/assets/testing/pep8-notebook-5-before-1.png)  |![PEP8 Notebook 5 After](/assets/testing/pep8-notebook-5-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function.|
+|5_Modelling_And_Evaluation.ipynb|![PEP8 Notebook 5 Before](/assets/testing/pep8-notebook-5-before-1.png) ![PEP8 Notebook 5 Before 2](/assets/testing/pep8-notebook-5-before-1.png)  |![PEP8 Notebook 5 After](/assets/testing/pep8-notebook-5-after.png) |All errors fixed except for line lengths which are mainly for text prints.|
+| multipage.py| ![PEP8 multipage.py Before](/assets/testing/pep8-multipage-before.png) | ![PEP8 multipage.py After](/assets/testing/pep8-multipage-after.png) | No Issues |
+| project_summary.py | ![PEP8 project_summary.py Before](/assets/testing/pep8-project_summary-before.png) | ![PEP8 project_summary.py After](/assets/testing/pep8-project_summary-after.png) | Maintained lines that are over the recommended amount for readability in the table |
+| Streamlit page 3| before | after | comments |
+| Streamlit page 4| before | after | comments |
+| Streamlit page 5| before | after | comments |
+| Streamlit page 6| before | after | comments |
+
 
 
 <div style="text-align: right;">

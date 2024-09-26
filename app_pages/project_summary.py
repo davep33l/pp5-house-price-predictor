@@ -1,19 +1,20 @@
 import streamlit as st
 
+
 def project_summary_body():
 
     st.write("### Project Summary")
 
     st.info(
-        f"**Project Purpose**\n\n"
-        f"A client has recently received an inheritance from a deceased great-grandfather, "
-        f"which contains properties located in Ames, Iowa. They have asked for assistance "
-        f"in maximising the sales price for the inherited properties. \n\n"
-        f"Although the client has an excellent understanding of property prices in their own "
-        f"local area, they fear that basing their estimates for property value on their current "
-        f"knowledge may lead to inaccurate appraisals. What makes a house desirable and valuable "
-        f"in their local area, might not be the same in Ames, Iowa. They have found a public "
-        f"dataset containing house prices from Ames, Iowa and have provided it as part of the analysis.\n\n"
+        "**Project Purpose** \n\n"
+        "A client has recently received an inheritance from a deceased great-grandfather, "
+        "which contains properties located in Ames, Iowa. They have asked for assistance "
+        "in maximising the sales price for the inherited properties. \n\n"
+        "Although the client has an excellent understanding of property prices in their own "
+        "local area, they fear that basing their estimates for property value on their current "
+        "knowledge may lead to inaccurate appraisals. What makes a house desirable and valuable "
+        "in their local area, might not be the same in Ames, Iowa. They have found a public "
+        "dataset containing house prices from Ames, Iowa and have provided it as part of the analysis. \n\n"
     )
 
     st.info(
@@ -47,27 +48,26 @@ def project_summary_body():
     )
 
     st.success(
-
-        f"**Project Dataset**\n"
-        f"* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data).\n "
-        f"* The dataset has almost 1.5 thousand rows and represents housing records "
-        f"from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, "
-        f"Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price "
-        f"for houses built between 1872 and 2010.\n "
+        "**Project Dataset** \n\n"
+        "* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). \n "
+        "* The dataset has almost 1.5 thousand rows and represents housing records "
+        "from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, "
+        "Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price "
+        "for houses built between 1872 and 2010. \n "
     )
-    
-        # copied from README file - "Business Requirements" section
+
+    # copied from README file - "Business Requirements" section
     st.success(
-    f"**The project has 2 business requirements:**\n\n"
-    f"* 1 - The client is interested in discovering how the house attributes correlate with the sale "
-    f"price. Therefore, the client expects data visualisations of the correlated variables against "
-    f"the sale price to show that.\n\n"
-    f"* 2 - The client is interested in predicting the house sale price from her four inherited "
-    f"houses and any other house in Ames, Iowa.\n\n"
+        "**The project has 2 business requirements:** \n\n"
+        "* 1 - The client is interested in discovering how the house attributes correlate with the sale "
+        "price. Therefore, the client expects data visualisations of the correlated variables against "
+        "the sale price to show that. \n\n"
+        "* 2 - The client is interested in predicting the house sale price from her four inherited "
+        "houses and any other house in Ames, Iowa. \n\n"
     )
 
     # Link to README file, so the users can have access to full project documentation
     st.warning(
-        f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/davep33l/pp5-house-price-predictor)."
+        "* For additional information, please visit and **read** the "
+        "[Project README file](https://github.com/davep33l/pp5-house-price-predictor)."
         )
