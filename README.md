@@ -391,11 +391,12 @@ nbqa flake8 jupyter_notebooks/1_Data_Collection.ipynb
 | project_hypothesis.py| ![PEP8 project_hypothesis.py Before](/assets/testing/pep8-project_hypothesis-before.png) | ![PEP8 project_hypothesis.py After](/assets/testing/pep8-project_hypothesis-after.png) | No Issues |
 | project_sale_price_study.py| ![PEP8 project_sale_price_study.py Before](/assets/testing/pep8-project_sale_price_study-before.png) | ![PEP8 project_sale_price_study.py After](/assets/testing/pep8-project_sale_price_study-after.png) | Kept a few warnings to maintain readability |
 | project_predict_sale_price.py| before | after | comments |
-| project_ml_predict_sale_price.py| before | after | comments |
-
+| project_ml_predict_sale_price.py| ![PEP8 project_ml_predict_sale_price.py Before](/assets/testing/pep8-ml_predict_sale_price-before.png) | ![PEP8 project_ml_predict_sale_price.py After](/assets/testing/pep8-ml_predict_sale_price-after.png) | Kept a few warnings to maintain readability |
+| data_management.py| before | after | comments |
+| evaluate_regression.py| before | after | comments |
+| predictive_analysis.py| before | after | comments |
 
 ![alt text](image.png)
-
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
 </div>

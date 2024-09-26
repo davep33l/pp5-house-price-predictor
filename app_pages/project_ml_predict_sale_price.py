@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 from src.data_management import load_pkl_file
-from src.machine_learning.evaluate_regression import regression_performance, regression_evaluation_plots
+from src.machine_learning.evaluate_regression import (regression_performance,
+                                                      regression_evaluation_plots)
+
 
 def project_ml_predict_sale_price_body():
 
@@ -26,11 +27,14 @@ def project_ml_predict_sale_price_body():
 
     # display pipeline training summary conclusions
     st.info(
-        f"* We trained our data using a regression model. Specifically a GradientBoostingRegressor model."
-        f" The model had an r2 score of 0.947 on the training data."
-        f" The model had an r2 score of 0.807 on the testing data."
-        f" The high r2 score on the training data suggests that the model is overfitting."
-        f" However as both of these scores pass the criteria set out in the project plan of an r2 score of 0.75, we will proceed with this model."
+        "* We trained our data using a regression model. Specifically "
+        "a GradientBoostingRegressor model.\n\n"
+        "The model had an r2 score of 0.947 on the training data. "
+        "The model had an r2 score of 0.807 on the testing data. "
+        "The high r2 score on the training data suggests that the "
+        "model is overfitting.\n\n"
+        "However as both of these scores pass the criteria set out in the "
+        "project plan of an r2 score of 0.75, we will proceed with this model."
     )
     st.write("---")
 
@@ -50,4 +54,8 @@ def project_ml_predict_sale_price_body():
     st.write("### Pipeline Performance")
     regression_performance(X_train, y_train, X_test, y_test, sale_price_pipe)
     st.write("---")
-    regression_evaluation_plots(X_train, y_train, X_test, y_test, sale_price_pipe)
+    regression_evaluation_plots(X_train,
+                                y_train,
+                                X_test,
+                                y_test,
+                                sale_price_pipe)
