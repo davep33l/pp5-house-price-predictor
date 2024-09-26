@@ -30,6 +30,7 @@ Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.he
     - [Cloning the project](#cloning-the-project)
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
   - [Testing](#testing)
+    - [PEP8 compliance](#pep8-compliance)
   - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
 
@@ -363,7 +364,14 @@ git clone https://github.com/davep33l/pp5-house-price-predictor.git
 
 ## Testing
 
-TBD
+I installed `nbqa` using `pip install nbqa` to enable me to run `flake8` against my notebooks
+
+### PEP8 compliance
+
+|Notebook name|Initial Results from Flake8|After Fixing Results|Summary|
+|-------------|---------------|-------------|-------|
+|1_Data_Collection.ipynb|![PEP8 Notebook 1 Before](/assets/testing/pep8-notebook-1-before.png)  |![PEP8 Notebook 1 After](pep8-notebook-1-after.png) |I decided to leave these errors as they are specifically for file paths|
+|2_Data_Cleaning.ipynb|![PEP8 Notebook 2 Before](/assets/testing/pep8-notebook-2-before-1.png) ![PEP8 Notebook 2 Before 2](/assets/testing/pep8-notebook-2-before-2.png)   |![PEP8 Notebook 2 After](/assets/testing/pep8-notebook-2-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function|
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
