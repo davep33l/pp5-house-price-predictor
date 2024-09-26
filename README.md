@@ -5,7 +5,7 @@ Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.he
 - [House Price Predictor](#house-price-predictor)
   - [Dataset Content](#dataset-content)
   - [Business Requirements](#business-requirements)
-  - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+  - [Hypothesis and Validation?](#hypothesis-and-validation)
   - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
   - [ML Business Case](#ml-business-case)
     - [Predict Sale Price](#predict-sale-price)
@@ -83,11 +83,14 @@ Although the client has an excellent understanding of property prices in their o
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
 </div>
 
-## Hypothesis and how to validate?
+## Hypothesis and Validation?
 
 1. Hypothesis 1 - Better quality decoration will positively influence the sale price (as higher quality materials are likely to have been used, and cost more). 
+   * **Correct** - The correlation study performed in the House Price Study supports this. Along with the feature importance extraction within the Modelling and Evaluation stage.
 2. Hypothesis 2 - Larger rooms/floors will positively influence the sale price (as it implies more land/space).
+   * **Correct** - The correlation study performed in the House Price Study supports this. Along with the feature importance extraction within the Modelling and Evaluation stage.
 3. Hypothesis 3 - New builds will positively influence the sale price (due to higher cost of materials / inflation)
+   * **Partially Correct** - The correlation study performed in the House Price Study supported this. However the final model did not include the age of the property as being a defining feature in predicting house price
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
