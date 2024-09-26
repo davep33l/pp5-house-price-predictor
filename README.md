@@ -31,6 +31,8 @@ Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.he
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
   - [Testing](#testing)
     - [PEP8 compliance](#pep8-compliance)
+    - [User Story Testing](#user-story-testing)
+    - [Dashboard Testing](#dashboard-testing)
   - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
 
@@ -397,8 +399,35 @@ nbqa flake8 jupyter_notebooks/1_Data_Collection.ipynb
 | predictive_analysis.py| ![PEP8 predictive_analysis.py Before](/assets/testing/pep8-predictive_analysis-before.png) | ![PEP8 predictive_analysis.py After](/assets/testing/pep8-predictive_analysis-after.png) | Kept a few warnings to maintain readability |
 
 
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
 
-![alt text](image.png)
+### User Story Testing
+
+* All user stories correlate back to a specific jupyter notebook. Rather than testing each user story, I have defined the notebook against the relevant Epic.
+
+|Epic|Notebook|Comments|
+|----|--------|--------|
+|Epic 1 - Data Collection|1_Data_Collection.ipynb|The 3 User stories have all been statisfied|
+|Epic 2 - Data Cleaning|2_Data_Cleaning.ipynb|The 7 User stories have all been statisfied|
+|Epic 3 - Data Explorationn|3_House_Price_Study.ipynb|The 6 User stories have all been statisfied|
+|Epic 4 - Feature Engineering|4_Feature_Engineering.ipynb|The 4 User stories have all been statisfied|
+|Epic 5 - Modelling & Evaluation|5_Modelling_And_Evaluation.ipynb|The 9 User stories have all been statisfied|
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
+
+### Dashboard Testing
+
+|Page|Evidence|Comments|
+|----|--------|--------|
+|Page 1 - Project Summary Page|![Streamlit Page 1](/assets/testing/streamlit-page1-1.png) ![Streamlit Page 1](/assets/testing/streamlit-page1-2.png) ![Streamlit Page 1](/assets/testing/streamlit-page1-3.png) ![Streamlit Page 1](/assets/testing/streamlit-page1-4.png) ![Streamlit Page 1](/assets/testing/streamlit-page1-5.png)|All functionality working and information present as per dashboard design|
+|Page 2 - Sale Price Study|![Streamlit Page 2](/assets/testing/streamlit-page2-1.png) ![Streamlit Page 2](/assets/testing/streamlit-page2-2.png) ![Streamlit Page 2](/assets/testing/streamlit-page2-3.png) ![Streamlit Page 2](/assets/testing/streamlit-page2-4.png) ![Streamlit Page 2](/assets/testing/streamlit-page2-5.png)|All functionality working and information present as per dashboard design|
+|Page 3 - Sale Price Prediction|![Streamlit Page 3](/assets/testing/streamlit-page3-1.png) ![Streamlit Page 3](/assets/testing/streamlit-page3-2.png)|All functionality working and information present as per dashboard design|
+|Page 4 - Project Hypothesis and Validation|![Streamlit Page 4](/assets/testing/streamlit-page4-1.png)|All functionality working and information present as per dashboard design|
+|Page 5 - ML: Predict Sale Price Pipeline Details|![Streamlit Page 5](/assets/testing/streamlit-page5-1.png) ![Streamlit Page 5](/assets/testing/streamlit-page5-2.png) ![Streamlit Page 5](/assets/testing/streamlit-page5-3.png)|All functionality working and information present as per dashboard design|
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
