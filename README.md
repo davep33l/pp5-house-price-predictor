@@ -16,21 +16,18 @@ Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.he
     - [Epic 4 - Feature Engineering](#epic-4---feature-engineering)
     - [Epic 5 - Modelling \& Evaluation](#epic-5---modelling--evaluation)
   - [Dashboard Design](#dashboard-design)
-    - [Page 1 - Project Summary](#page-1---project-summary)
+    - [Page 1 - Project Summary Page](#page-1---project-summary-page)
     - [Page 2 - Sale Price Study](#page-2---sale-price-study)
-      - [Before Analysis](#before-analysis)
-      - [After Analysis](#after-analysis)
     - [Page 3 - Sale Price Prediction](#page-3---sale-price-prediction)
     - [Page 4 - Project Hypothesis and Validation](#page-4---project-hypothesis-and-validation)
-    - [Page 5 - ML: Process to determine Sale Price (placeholder name)](#page-5---ml-process-to-determine-sale-price-placeholder-name)
+    - [Page 5 - ML: Predict Sale Price Pipeline Details](#page-5---ml-predict-sale-price-pipeline-details)
   - [Unfixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
     - [Heroku](#heroku)
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+  - [Testing](#testing)
   - [Credits](#credits)
-    - [Content](#content)
-    - [Media](#media)
-  - [Acknowledgements (optional)](#acknowledgements-optional)
+  - [Acknowledgements](#acknowledgements)
 
 
 ## Dataset Content
@@ -199,7 +196,7 @@ As a data scientist, I want to save the model so it can be used in the streamlit
 
 ## Dashboard Design
 
-* Project Summary Page
+### Page 1 - Project Summary Page
   * This will contain:
     * The project purpose
     * The project terms and jargon with a breakdown of all the features and description
@@ -207,24 +204,33 @@ As a data scientist, I want to save the model so it can be used in the streamlit
     * The business requirements
     * The link to the github repository
 
-* Project Hypothesis
+### Page 2 - Sale Price Study
+  * This will contain:
+    * Details of business requirement 1
+    * An inspection of the data set 
+    * Details of the features used in the correlation study
+    * Conclusions of how the features relate to Sale price
+    * A checkbox to show a scatter plot visualising the feature distrubution vs sale price
+    * A checkbox to show correlation study heatmaps and power predictive score 
+
+### Page 3 - Sale Price Prediction
+  * This will contain:
+    * Details of business requirement 2
+    * Have input widgets relating to house features, which are given to an ML task to predict the Sale Price. 
+    * A button for the user to run the predictive analysis on
+    * A section where the predictive analysis has been run on the inherited houses with their results
+
+### Page 4 - Project Hypothesis and Validation
   * This will contain:
     * Each of the project hypothesis and the conclusion (Incorrect/Correct) 
-
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
-
-### Page 1 - Project Summary
-### Page 2 - Sale Price Study
-#### Before Analysis
-- High level, we know we want to answer business requirement 1, and as part of the analysis will explore the best visulisations to show the correlation of variables against the Sale Price.
-#### After Analysis
-- TBD
-### Page 3 - Sale Price Prediction
-- Highlight business requirement 2
-- Have input widgets relating to house features, which are given to an ML task to predict the Sale Price. 
-### Page 4 - Project Hypothesis and Validation
-### Page 5 - ML: Process to determine Sale Price (placeholder name)
+  
+### Page 5 - ML: Predict Sale Price Pipeline Details
+  * This will contain:
+    * A section explaining how we trained the data
+    * A section showing the pipeline used including the different imputations and feature engineering steps
+    * The features that the model was trained on
+    * The importance of each feature
+    * The performance of the pipeline and visual scatter plot
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
@@ -242,16 +248,17 @@ As a data scientist, I want to save the model so it can be used in the streamlit
 
 ### Heroku
 
-* The App live link is: <https://YOUR_APP_NAME.herokuapp.com/>
+* The App live link is: <[https://YOUR_APP_NAME.herokuapp.com/](https://pp5-house-price-predictor-3b886bb0d166.herokuapp.com/)>
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+2. 
+3. At the Deploy tab, select GitHub as the deployment method.
+4. Select your repository name and click Search. Once it is found, click Connect.
+5. Select the branch you want to deploy, then click Deploy Branch.
+6. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
+7. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
@@ -259,19 +266,29 @@ As a data scientist, I want to save the model so it can be used in the streamlit
 
 ## Main Data Analysis and Machine Learning Libraries
 
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
-
 | Library Name | Example Usage |
 |--------------|---------------|
-|       numpy       |        tbc       |
-|       pandas       |        tbc        |
-|       matplotlib      |      tbc          |
-|       scikit-learn   |      tbc          |
-|       feature-engine   |     tbc           |
-|       ydata-profiling   |      tbc          |
-|       plotly   |        tbc        |
-|       ppscore   |      tbc          |
-|       streamlit   |      tbc          |
+| [numpy](https://numpy.org/) | Used in core visualization functions to manipulate data types. |
+| [pandas](https://pandas.pydata.org/docs/index.html) | Used for data handling by utilizing the DataFrame object. |
+| [matplotlib](https://matplotlib.org/) | Used for plotting various charts and visuals to provide evidence and conclusions on the data. |
+| [seaborn](https://seaborn.pydata.org/) | Used for plotting various charts and visuals to provide evidence and conclusions on the data. |
+| [sklearn](https://scikit-learn.org/stable/) | Used to create an ML pipeline, run ML algorithms, split train and test sets, and provide R² metric scores. |
+| [feature-engine](https://feature-engine.trainindata.com/en/latest/) | Used to perform imputation and feature engineering encoding supplied to the sklearn pipeline. |
+| [ydata_profiling](https://docs.profiling.ydata.ai/latest/) | Used to create quantile and statistical reports on the variables. |
+| [os](https://docs.python.org/3/library/os.html) | Used to assist in loading data, creating files/directories, and loading environment variables. |
+| [ppscore](https://pypi.org/project/ppscore/) | Used to calculate the Power Predictive Score for variables. |
+| [scipy](https://scipy.org/) | Used as part of the feature engineering analysis to produce statistics. |
+| [xgboost](https://xgboost.readthedocs.io/en/stable/) | Used to assess the best possible algorithms for the data. |
+| [joblib](https://joblib.readthedocs.io/en/stable/) | Used to save and load the model pipeline. |
+| [streamlit](https://streamlit.io/) | Used to create an interactive web application to showcase the project. |
+
+<div style="text-align: right;">
+<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
+</div>
+
+## Testing
+
+TBD
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
@@ -279,36 +296,15 @@ As a data scientist, I want to save the model so it can be used in the streamlit
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
+* I would not have been able to complete this project without the Churnometer walkthrough project as a support, it provided the structure and guidance I needed to piece this project together. 
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
 </div>
 
-### Content
+## Acknowledgements
 
-* The text for the Home page was taken from Wikipedia Article A
-* Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-* The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-<div style="text-align: right;">
-<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
-</div>
-
-### Media
-
-* The photos used on the home and sign-up page are from This Open Source site
-* The images used for the gallery page were taken from this other open-source site
-
-<div style="text-align: right;">
-<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
-</div>
-
-## Acknowledgements (optional)
-
-
-* In case you would like to thank the people that provided support through this project.
+* I want to thank my wife for giving me the freedom to commit to this course for the past year, and more recently giving me the extra time, even though we have a new born son to raise. Without her support and encouragement I could not have seen this through to the end. 
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
