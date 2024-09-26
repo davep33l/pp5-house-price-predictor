@@ -387,13 +387,14 @@ nbqa flake8 jupyter_notebooks/1_Data_Collection.ipynb
 |4_Feature_Engineering.ipynb|![PEP8 Notebook 4 Before](/assets/testing/pep8-notebook-4-before.png)  |![PEP8 Notebook 4 After](/assets/testing/pep8-notebook-4-after.png) |All errors fixed except for line lengths which are mainly for text prints and one which is an unused variable from the CI provided function.|
 |5_Modelling_And_Evaluation.ipynb|![PEP8 Notebook 5 Before](/assets/testing/pep8-notebook-5-before-1.png) ![PEP8 Notebook 5 Before 2](/assets/testing/pep8-notebook-5-before-1.png)  |![PEP8 Notebook 5 After](/assets/testing/pep8-notebook-5-after.png) |All errors fixed except for line lengths which are mainly for text prints.|
 | multipage.py| ![PEP8 multipage.py Before](/assets/testing/pep8-multipage-before.png) | ![PEP8 multipage.py After](/assets/testing/pep8-multipage-after.png) | No Issues |
-| project_summary.py | ![PEP8 project_summary.py Before](/assets/testing/pep8-project_summary-before.png) | ![PEP8 project_summary.py After](/assets/testing/pep8-project_summary-after.png) | Retained lines that are over the recommended amount for readability in the table |
+| project_summary.py | ![PEP8 project_summary.py Before](/assets/testing/pep8-project_summary-before.png) | ![PEP8 project_summary.py After](/assets/testing/pep8-project_summary-after.png) | Retained lines that are over the recommended amount for readability in the table for readability |
 | project_hypothesis.py| ![PEP8 project_hypothesis.py Before](/assets/testing/pep8-project_hypothesis-before.png) | ![PEP8 project_hypothesis.py After](/assets/testing/pep8-project_hypothesis-after.png) | No Issues |
-| project_sale_price_study.py| before | after | comments |
+| project_sale_price_study.py| ![PEP8 project_sale_price_study.py Before](/assets/testing/pep8-project_sale_price_study-before.png) | ![PEP8 project_sale_price_study.py After](/assets/testing/pep8-project_sale_price_study-after.png) | Kept a few warnings to maintain readability |
 | project_predict_sale_price.py| before | after | comments |
 | project_ml_predict_sale_price.py| before | after | comments |
 
 
+![alt text](image.png)
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
