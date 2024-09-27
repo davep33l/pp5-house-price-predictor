@@ -1,5 +1,9 @@
 # House Price Predictor
 
+This project is designed using CRISP-DM principles to create a predictive analysis model trained on historic house price data in Ames, Iowa, to predict the sale price of other houses in the same location. 
+
+![Am I Responsive](/assets/readme/am-i-responsive.png)
+
 Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.herokuapp.com/)
 
 - [House Price Predictor](#house-price-predictor)
@@ -258,7 +262,7 @@ As a data scientist, I want to save the model so it can be used in the streamlit
 
 ### Heroku
 
-* The App live link is: <[https://YOUR_APP_NAME.herokuapp.com/](https://pp5-house-price-predictor-3b886bb0d166.herokuapp.com/)>
+* The App live link is [here](https://pp5-house-price-predictor-3b886bb0d166.herokuapp.com/)
 
 #### Prerequisites
 
