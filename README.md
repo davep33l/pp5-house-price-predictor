@@ -111,6 +111,7 @@ Although the client has an excellent understanding of property prices in their o
 
 * Business Requirement 2 - Regression and Data Analysis
   * We want to predict the expected sale price of 4 inherited houses using a regression ML model
+  * We want to be able to input pertinent features of a house in realtime to predict the sale price of any house in Ames, Iowa by using a pre trained Machine Learning Regression Model.
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
