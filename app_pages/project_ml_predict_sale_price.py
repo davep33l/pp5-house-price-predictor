@@ -11,7 +11,7 @@ def project_ml_predict_sale_price_body():
     # load tenure pipeline files
     version = 'v1'
     sale_price_pipe = load_pkl_file(
-        f"outputs/ml_pipeline/predict_sale_price/{version}/clf_pipeline.pkl")
+        f"outputs/ml_pipeline/predict_sale_price/{version}/regression_pipeline.pkl")
     sale_price_feat_importance = plt.imread(
         f"outputs/ml_pipeline/predict_sale_price/{version}/features_importance.png")
     X_train = pd.read_csv(
