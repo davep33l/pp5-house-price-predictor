@@ -25,7 +25,6 @@ Live site can be viewed [here](https://pp5-house-price-predictor-3b886bb0d166.he
     - [Page 3 - Sale Price Prediction](#page-3---sale-price-prediction)
     - [Page 4 - Project Hypothesis and Validation](#page-4---project-hypothesis-and-validation)
     - [Page 5 - ML: Predict Sale Price Pipeline Details](#page-5---ml-predict-sale-price-pipeline-details)
-  - [Unfixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
     - [Heroku](#heroku)
       - [Prerequisites](#prerequisites)
@@ -245,14 +244,6 @@ As a data scientist, I want to save the model so it can be used in the streamlit
     * The features that the model was trained on
     * The importance of each feature
     * The performance of the pipeline and visual scatter plot
-
-<div style="text-align: right;">
-<a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
-</div>
-
-## Unfixed Bugs
-
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
 
 <div style="text-align: right;">
 <a href="#house-price-predictor" style="font-size: 1em; font-style: italic; ">Back to Top</a>
