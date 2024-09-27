@@ -54,6 +54,11 @@ def project_ml_predict_sale_price_body():
     st.write("### Pipeline Performance")
     regression_performance(X_train, y_train, X_test, y_test, sale_price_pipe)
     st.write("---")
+    st.success(
+        "The blue dots represent the actual sale price of the houses. "
+        "The trend line represents the predicted sale price of the houses. "
+        "The closer the blue dots are to the trend line, the better the model is at predicting the sale price."
+    )
     regression_evaluation_plots(X_train,
                                 y_train,
                                 X_test,

@@ -55,9 +55,12 @@ def check_variables_for_UI(sale_price_features):
             itertools.chain(sale_price_features)
         )
     )
-    st.write(
-        f"* There are {len(combined_features)} features for the UI: \n\n {combined_features}")
 
+    st.info(
+        "Using the widgets below, you can input the values for the features "
+        "that the model uses to predict the sale price of a house. "
+        "Hit the 'Predict Sale Price' button to see the prediction."
+    )
 
 def DrawInputsWidgets():
 
